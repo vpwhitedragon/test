@@ -1,0 +1,44 @@
+Creating new branch: git checkout -b <branch-name>
+Pushing branch from local to remote repo: git push origin <branch-name>
+Renaming branch:
+Renaming local branch: git branch -m old-name new-name
+Renaming remote branch: git push origin :old-name new-name
+Deleting branch:
+Deleting local branch: git branch -d <branch-name>
+Deleting remote branch: git push origin -d <branch-name>
+git branch -a: Lists all the branches
+git branch -d <branch-name>: Deletes the branch in local repo
+git checkout -b: Creates a branch and switches to it
+git checkout <branch-name>: Switches to the provided branch
+In your local and push master: git merge master signin && git push origin master
+git merge <branch>: Merges <branch> to current branch
+git rebase <base>: Rebases the current branch onto the base (branch name, commit ID, tag)
+git rebase -i <base>: Performs interactive rebase. Launches editor where you can specify command on each commit to transform it.
+git rebase --abort: Cancels rebasing and goes back to the previous commit
+git rebase --continue: Continues rebasing after resolving the rebase conflicts
+git pull --rebase: Fetches the remote copy and rebases it into the current branch of the local copy
+
+Set of commands to undo your changes:
+
+amend
+checkout
+reset
+revert
+Set of commands to undo/remove your files:
+
+rm
+clean
+
+
+git revert <commit>: Creates a new commit that undoes all changes made in the commit and applies it to the current branch
+
+git reset <file>: Moves file changes from staging area to working directory.
+
+git reset <commit>: Moves current branch's HEAD tip to the old <commit>. All the changes in the commits (that you skipped to move to the old commit) are moved to the working area.
+
+git commit --amend: Adds staged changes to the last commit and allows for editing the old commit message
+
+git rm --cached(file_name): Untracks the current file
+
+git checkout <commit>: Switches the HEAD to the provided commit
+
